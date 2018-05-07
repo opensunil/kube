@@ -9,7 +9,7 @@ whoami
 
 # reset changes
 if [ -d "$REPO_FOLDER" ]; then
-	rm -rf $REPO_FOLDER;
+	sudo rm -rf $REPO_FOLDER;
 fi
 
 # Clone repo 
