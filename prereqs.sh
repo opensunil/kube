@@ -12,7 +12,7 @@ if [ -d "$REPO_FOLDER" ]; then
 fi
 
 echo "Create $USER user if it does not exist.  Provide password if asked."
-id -u $USER &>/dev/null || sudo adduser kube --gecos "First Last,RoomNumber,WorkPhone,HomePhone"
+id -u $USER &>/dev/null || sudo adduser $USER --gecos "First Last,RoomNumber,WorkPhone,HomePhone"; sudo usermod -aG sudo $USER
 
 echo "Switch to $USER user.  Enter rock64 password if asked."
 #sudo su - kube
