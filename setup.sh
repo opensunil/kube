@@ -15,9 +15,9 @@ fi
 git clone $REPO $REPO_FOLDER
 
 # Run repo setup file
-if [ -f "$REPO_FOLDER/$STARTUP_SCRIPT" ]; then
-	source  "$REPO_FOLDER/$STARTUP_SCRIPT"
-fi 
+#if [ -f "$REPO_FOLDER/$STARTUP_SCRIPT" ]; then
+#	source  "$REPO_FOLDER/$STARTUP_SCRIPT"
+#fi 
 
 
 echo Git user setup
