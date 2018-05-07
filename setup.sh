@@ -1,5 +1,8 @@
 #!/bin/bash
 
+VARIABLE_SCRIPT=variables.sh
+source $VARIABLE_SCRIPT
+
 #whoami
 whoami
 
