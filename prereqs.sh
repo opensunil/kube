@@ -3,6 +3,7 @@
 VARIABLE_SCRIPT=variables.sh
 source $VARIABLE_SCRIPT
 
+echo "Installing ansible. Enter password if needed."
 sudo apt -y install ansible
 
 echo "Create $KUBE_USER user if it does not exist.  Provide password if asked."
