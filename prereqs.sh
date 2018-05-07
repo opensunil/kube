@@ -16,4 +16,4 @@ id -u $USER &>/dev/null || sudo adduser $USER --gecos "First Last,RoomNumber,Wor
 
 echo "Switch to $USER user.  Enter rock64 password if asked."
 #sudo su - kube
-sudo -u $USER "$STARTUP_SCRIPT"
+sudo -u $USER "./$STARTUP_SCRIPT"
