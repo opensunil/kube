@@ -1,8 +1,5 @@
 #!/bin/bash
 
-if [ -d "kube" ]; then
-	cp ./kube/variables.sh .
-fi
 
 VARIABLE_SCRIPT=variables.sh
 source $VARIABLE_SCRIPT
