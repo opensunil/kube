@@ -18,6 +18,8 @@ fi
 git clone $REPO $REPO_FOLDER
 
 cd $REPO_FOLER
+echo Current folder
+pwd
 
 echo Git user setup
 git config user.email "opensunil@gmail.com"
