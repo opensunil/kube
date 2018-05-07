@@ -5,8 +5,7 @@ VARIABLE_SCRIPT=variables.sh
 source $VARIABLE_SCRIPT
 
 #whoami
-echo Current running user
-whoami
+echo Current user: $USER
 
 # reset changes
 if [ -d "$REPO_FOLDER" ]; then
@@ -25,5 +24,4 @@ git config user.email "opensunil@gmail.com"
 git config user.name "Sunil Varghese"
 
 #whoami
-echo Current running user
-whoami
+echo Current user: $USER
