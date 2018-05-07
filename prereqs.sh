@@ -9,6 +9,12 @@ STARTUP_SCRIPT=setup.sh
 echo "Create kube user if it does not exist.  Provide password if asked."
 id -u $USER &>/dev/null || sudo adduser kube --gecos "First Last,RoomNumber,WorkPhone,HomePhone"
 
+echo "Switch to kube user.  Enter rock64 password if asked."
+sudo su - kube
+
+#whoami
+whoami
+
 # reset changes
 if [ -d "$REPO_FOLDER" ]; then
 	rm -rf $REPO_FOLDER;
