@@ -17,7 +17,7 @@ fi
 # Clone repo 
 git clone $REPO $REPO_FOLDER
 
-cd $REPO_FOLER
+cd $REPO_FOLDER
 echo Current folder
 pwd
 
