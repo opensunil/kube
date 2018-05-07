@@ -11,9 +11,9 @@ if [ -d "$REPO_FOLDER" ]; then
 	cp $REPO_FOLDER/$STARTUP_SCRIPT .
 fi
 
-echo "Create $USER user if it does not exist.  Provide password if asked."
-id -u $USER &>/dev/null || sudo adduser $USER --gecos "First Last,RoomNumber,WorkPhone,HomePhone"; sudo usermod -aG sudo $USER
+echo "Create $KUBE_USER user if it does not exist.  Provide password if asked."
+id -u $KUBE_USER &>/dev/null || sudo adduser $KUBE_USER --gecos "First Last,RoomNumber,WorkPhone,HomePhone"; sudo usermod -aG sudo $KUBE_USER
 
-echo "Switch to $USER user.  Enter rock64 password if asked."
+echo "Switch to $KUBE_USER user.  Enter rock64 password if asked."
 #sudo su - kube
-sudo -u $USER "./$STARTUP_SCRIPT"
+sudo -u $KUBE_USER "./$STARTUP_SCRIPT"
