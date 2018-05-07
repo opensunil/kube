@@ -15,6 +15,8 @@ fi
 # Clone repo 
 git clone $REPO $REPO_FOLDER
 
+cd $REPO_FOLER
+
 echo Git user setup
 git config user.email "opensunil@gmail.com"
 git config user.name "Sunil Varghese"
