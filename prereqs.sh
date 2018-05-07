@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Setup variables
-USER=kube
-REPO=https://github.com/opensunil/kube.git
-REPO_FOLDER=/tmp/kube
-STARTUP_SCRIPT=setup.sh
+VARIABLE_SCRIPT=variables.sh
+
+source $VARIABLE_SCRIPT
 
 echo "Create kube user if it does not exist.  Provide password if asked."
 id -u $USER &>/dev/null || sudo adduser kube --gecos "First Last,RoomNumber,WorkPhone,HomePhone"
