@@ -12,7 +12,10 @@ echo Current user: $USER
 #	sudo rm -rf $REPO_FOLDER;
 #fi
 
-if [ ! -d "$REPO_FOLDER" ]; then
+REPO_FOLDER_OWNER="$(stat --format '%U' "$REPO_FOLDER")"
+REPO_FOLDER_GROUP="$(stat --format '%G' "$REPO_FOLDER")"
+
+if [ ! -d "$REPO_FOLDER" ] || [! $REPO_FOLDER_OWNER = $KUBE_USER] || [! $REPO_FOLDER_GROUP = $KUBE_GROUP]; then
 	# Clone repo 
 	sudo git clone $REPO $REPO_FOLDER
 	sudo chown -R $USER $REPO_FOLDER
