@@ -8,7 +8,7 @@ export KPORT2=2222
 export KPORT3=2322
 
 # Filesystem variables
-STARTUP_SCRIPT=setup.sh
+SETUP_SCRIPT=setup.sh
 REPO_FOLDER=/tmp/kube
 
 # Git variables
