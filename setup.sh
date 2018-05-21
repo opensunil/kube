@@ -12,10 +12,8 @@ echo Current user: $USER
 #	sudo rm -rf $REPO_FOLDER;
 #fi
 
-REPO_FOLDER_OWNER="$(stat --format '%U' "$REPO_FOLDER")"
-REPO_FOLDER_GROUP="$(stat --format '%G' "$REPO_FOLDER")"
+if [ ! -d "$REPO_FOLDER" ]; then
 
-if [ ! -d "$REPO_FOLDER" ] || [! $REPO_FOLDER_OWNER = $KUBE_USER] || [! $REPO_FOLDER_GROUP = $KUBE_GROUP]; then
 	# Clone repo 
 	sudo git clone $REPO $REPO_FOLDER
 	sudo chown -R $USER $REPO_FOLDER
@@ -30,9 +28,16 @@ if [ ! -d "$REPO_FOLDER" ] || [! $REPO_FOLDER_OWNER = $KUBE_USER] || [! $REPO_FO
 
 	#whoami
 	echo Current user: $USER
-else
-	cd $REPO_FOLDER
-	git pull
 fi
+
+REPO_FOLDER_OWNER="$(stat --format '%U' "$REPO_FOLDER")"
+REPO_FOLDER_GROUP="$(stat --format '%G' "$REPO_FOLDER")"
+
+if [! $REPO_FOLDER_OWNER = $KUBE_USER] || [! $REPO_FOLDER_GROUP = $KUBE_GROUP]; then
+fi
+
+cd $REPO_FOLDER
+git pull
+
 
 
