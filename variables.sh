@@ -10,7 +10,8 @@ export KPORT3=2322
 
 # Filesystem variables
 SETUP_SCRIPT=setup.sh
-REPO_FOLDER=/tmp/kube
+REPO_HOST_FOLDER=/tmp/
+REPO_FOLDER=kube
 
 # Git variables
 REPO=https://github.com/opensunil/kube.git
