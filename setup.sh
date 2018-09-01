@@ -32,7 +32,7 @@ echo repo group: $REPO_FOLDER_GROUP
 echo kube user : $KUBE_USER
 echo kube group : $KUBE_GROUP
 
-if [ $REPO_FOLDER_OWNER != $KUBE_USER] || [ $REPO_FOLDER_GROUP != $KUBE_GROUP]; then
+if [ $REPO_FOLDER_OWNER != $KUBE_USER ] || [ $REPO_FOLDER_GROUP != $KUBE_GROUP ]; then
         sudo chown -R $USER $REPO_HOST_FOLDER/$REPO_FOLDER
 fi
 
