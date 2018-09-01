@@ -36,14 +36,13 @@ if [ $REPO_FOLDER_OWNER != $KUBE_USER ] || [ $REPO_FOLDER_GROUP != $KUBE_GROUP ]
         sudo chown -R $USER $REPO_HOST_FOLDER/$REPO_FOLDER
 fi
 
-        echo Git user setup
+echo Git user setup
+cd $REPO_FOLDER
+if [ $(git config user.email | wc -c) -eq 0 ]; then
+	echo Setting up git user settings for Sunil
 	git config user.email "opensunil@gmail.com"
 	git config user.name "Sunil Varghese"
-
-	#whoami
-	echo Current user: $USER
-
-cd $REPO_FOLDER
+fi
 git pull
 
 
