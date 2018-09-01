@@ -27,7 +27,12 @@ fi
 REPO_FOLDER_OWNER="$(stat --format '%U' "$REPO_HOST_FOLDER/$REPO_FOLDER")"
 REPO_FOLDER_GROUP="$(stat --format '%G' "$REPO_HOST_FOLDER/$REPO_FOLDER")"
 
-if [ ! $REPO_FOLDER_OWNER = $KUBE_USER] || [ ! $REPO_FOLDER_GROUP = $KUBE_GROUP]; then
+echo repo owner: $REPO_FOLDER_OWNER
+echo repo group: $REPO_FOLDER_GROUP
+echo kube user : $KUBE_USER
+echo kube group : $KUBE_GROUP
+
+if [ ! $REPO_FOLDER_OWNER == $KUBE_USER] || [ ! $REPO_FOLDER_GROUP == $KUBE_GROUP]; then
         sudo chown -R $USER $REPO_HOST_FOLDER/$REPO_FOLDER
 fi
 
