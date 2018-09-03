@@ -3,9 +3,16 @@
 VARIABLE_SCRIPT=variables.sh
 source $VARIABLE_SCRIPT
 
-echo "Installing ansible. Enter password if needed."
+echo Check for updates
 sudo apt update
+
+echo Install apt-transport-https
 sudo apt install -y apt-transport-https
+
+echo Install docker.io
+sudo apt install docker.io
+
+echo "Installing ansible. Enter password if needed."
 #sudo apt -y install ansible
 ./package_installer.sh ansible
 
