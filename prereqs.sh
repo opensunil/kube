@@ -5,6 +5,7 @@ source $VARIABLE_SCRIPT
 
 echo "Installing ansible. Enter password if needed."
 sudo apt update
+sudo apt install -y apt-transport-https
 #sudo apt -y install ansible
 ./package_installer.sh ansible
 
