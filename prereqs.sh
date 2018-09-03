@@ -10,7 +10,3 @@ sudo apt update
 
 echo "Create $KUBE_USER user if it does not exist.  Provide password if asked."
 id -u $KUBE_USER &>/dev/null || sudo adduser $KUBE_USER --gecos "First Last,RoomNumber,WorkPhone,HomePhone"; sudo usermod -aG sudo $KUBE_USER
-
-echo "Switch to $KUBE_USER user.  Enter rock64 password if asked."
-#sudo su - kube
-sudo -u $KUBE_USER "./$SETUP_SCRIPT"
