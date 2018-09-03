@@ -10,7 +10,7 @@ echo Install apt-transport-https
 sudo apt install -y apt-transport-https
 
 echo Install docker.io
-sudo apt install docker.io
+sudo apt install -y docker.io
 
 echo "Installing ansible. Enter password if needed."
 #sudo apt -y install ansible
