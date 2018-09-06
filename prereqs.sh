@@ -17,6 +17,8 @@ sudo timedatectl set-timezone America/New_York
 
 if ! type "kubeadm" > /dev/null; then
   echo kubeadm NOT installed.  Proceeding with installation.
+else
+  echo kubeadm already installed.
 fi
 
 #echo "Installing ansible. Enter password if needed."
