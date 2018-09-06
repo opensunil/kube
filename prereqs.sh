@@ -15,7 +15,9 @@ sudo apt install -y docker.io
 echo Set timezone to America/New_York
 sudo timedatectl set-timezone America/New_York
 
-
+if ! type "kubeadm" > /dev/null; then
+  echo kubeadm NOT installed.  Proceeding with installation.
+fi
 
 #echo "Installing ansible. Enter password if needed."
 #./package_installer.sh ansible
