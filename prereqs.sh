@@ -17,6 +17,16 @@ sudo timedatectl set-timezone America/New_York
 
 if ! type "kubeadm" > /dev/null; then
   echo kubeadm NOT installed.  Proceeding with installation.
+  sudo systemctl start docker
+  sudo systemctl enable docker
+  echo Add kubernetes keys 
+  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+  echo Add kubernetes repository
+  sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main" 
+  echo Install kubeadm
+  sudo apt install kubeadm
+  echo Disable swap
+  sudo swapoff -a
 else
   echo kubeadm already installed.
 fi
