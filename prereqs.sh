@@ -24,7 +24,7 @@ if ! type "kubeadm" > /dev/null; then
   echo Add kubernetes repository
   sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main" 
   echo Install kubeadm
-  sudo apt install kubeadm
+  sudo apt install -y kubeadm
   echo Disable swap
   sudo swapoff -a
 else
