@@ -12,6 +12,11 @@ sudo apt install -y apt-transport-https
 echo Install docker.io
 sudo apt install -y docker.io
 
+echo Set timezone to America/New_York
+sudo timedatectl set-timezone America/New_York
+
+
+
 #echo "Installing ansible. Enter password if needed."
 #./package_installer.sh ansible
 
