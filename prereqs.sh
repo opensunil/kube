@@ -7,9 +7,9 @@ echo Check for updates
 sudo apt update
 
 echo Install apt-transport-https
-sudo apt install -y apt-transport-https
+#sudo apt install -y apt-transport-https
 
-echo Install docker.io
+#echo Install docker.io
 sudo apt install -y docker.io
 
 echo Set timezone to America/New_York
